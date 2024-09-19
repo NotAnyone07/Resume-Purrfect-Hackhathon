@@ -264,6 +264,8 @@ html,body{
     display: flex;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 8px;
+    background-color: var(--clr-white);
+    z-index: 9999;
 }
 
 .navbar .container{
