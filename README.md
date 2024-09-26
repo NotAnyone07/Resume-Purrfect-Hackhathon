@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div align="center">
 <img src="assets/images/PURRFECT-RESUME.png" width="500px"/>
 </div>
@@ -293,5 +292,3 @@ You can see the project through <a href="https://resume-purrfect-hackhathon-nabi
 <hr>
 <p align="center"><strong>Thank you for visiting my project!</strong> If you found this helpful, please give it a star on GitHub!</p>
 
-#
->>>>>>> ed4a25b (bugfixes)
