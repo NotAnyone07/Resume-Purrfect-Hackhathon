@@ -136,8 +136,8 @@ function cursorAnime() {
 
 cursorAnime();
 
-let copylogos = document.querySelector(".logo-slide").cloneNode(true);
-document.querySelector('.logos').appendChild(copylogos);
+// let copylogos = document.querySelector(".logo-slide").cloneNode(true);
+// document.querySelector('.logos').appendChild(copylogos);
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: "auto",
@@ -145,13 +145,13 @@ var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     pagination: {
       el: ".swiper-pagination",
-      clickable: true,
+      clickable: false,
     },
   });
 
   function videoAnime() {
     var video = document.querySelector(".swiper");
-    var swiperContent = document.querySelector(".swiper-wrapper"); 
+    // var swiperContent = document.querySelector(".swiper-wrapper"); 
     var playbtn = document.querySelector(".usercursor-swiper");
     var swiperInstance = document.querySelector(".mySwiper").swiper;
 
@@ -197,7 +197,7 @@ var swiper = new Swiper(".mySwiper", {
         gsap.to(playbtn, {
             left: x + 'px',
             top: y + 'px',
-            duration: 0.15, 
+            duration: 0.5, 
         });
 
         

@@ -751,52 +751,61 @@ html,body{
 }
 
 /* section two */
-.logos {
-    overflow: hidden;
-    gap: 50vw;
-    padding: 20px 20px;
-    width: 80vw;
-    height: 20px;
-    margin-left: 150px;
-    /* margin-top: 2px; */
-    margin-bottom: 10px;
-    /* background-color: red; */
-    white-space: nowrap;
-    position: relative;
+.logos-text{
     display: flex;
-    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.logos-heading{
+    font-family: var(--font-futura);
+    color: var(--clr-black);
+    font-size: 30px;
+}
+  .logos {
+    /* background: white; */
+    /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);  */
+    height: 50px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
   }
   
-  .logos:before,
-  .logos:after {
-    position: absolute;
-    top: 0;
-    width: 250px;
-    height: 100%;
+  .logos::before,
+  .logos::after {
+    /* background-color: red; */
     content: "";
+    height: 100%;
+    position: absolute;
+    width: 300px;
     z-index: 2;
   }
   
-  .logos:before {
-    left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--clr-light-green));
-  }
-  
-  .logos:after {
+  .logos::after {
     right: 0;
+    top: 0;
+    /* transform: rotateZ(180deg); */
     background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--clr-light-green));
+    /* background-color: #fff; */
+    
   }
   
+  .logos::before {
+    left: 0;
+    top: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--clr-light-green));
+    /* background-color: wheat; */
+  }
+  
+  .logos .logo-slide{
+    -webkit-animation: scroll 20s linear infinite;
+    animation: scroll 20s linear infinite;
+    display: flex;
+    width: fit-content;
+  }
+
   .logos:hover .logo-slide { 
     animation-play-state: paused;
-  }
-  
-  .logo-slide {
-    display: flex; 
-    justify-content: space-evenly;
-    animation: 15s slide infinite linear;
-    white-space: nowrap;
-
   }
   
   .logo-slide img {
@@ -808,15 +817,26 @@ html,body{
   .darkmode .logo-slide img{
     filter: none;
   }
+  
+  @-webkit-keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      /* scroll only 50% */
+      transform: translateX(-50%);
+    }
+  }
 
-@keyframes slide {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 .custom-hr{
     color: var(--clr-black);
     margin: 0px 150px;
@@ -876,7 +896,7 @@ html,body{
     padding: 3vw 2.2vw;
     background-color: var(--clr-light-green);
     color: var(--clr-black);
-    font-size: 1.5vw;
+    /* font-size: 1.5vw; */
     position: absolute;
     transform: translate(-50%,-50%);
     pointer-events: none;
@@ -888,9 +908,13 @@ html,body{
     align-items: center;
     opacity: 0;
     scale: 0;
+    z-index: 9999;
 }
 .usercursor-swiper svg{
     fill: var(--clr-black);
+    /* width: 20px;
+    height: 10px; */
+    size: 30rem;
 }
 
 
@@ -915,11 +939,14 @@ html,body{
 
 .swiper {
     width: 50%;
-    height: 350px;
+    height: 50%;
     /* margin-top: 40px; */
+    /* box-shadow: rgba(255, 255, 255, 0.5) 0px 8px 13px, rgba(255, 255, 255, 0.5) 0px -8px 13px; */
+
+
   }
 
- 
+  
 
   .swiper-slide {
     text-align: center;
@@ -929,6 +956,7 @@ html,body{
     justify-content: center;
     align-items: center;
     border-left: 1px solid var(--clr-black);
+
   }
 
   .swiper-slide img {
@@ -936,6 +964,7 @@ html,body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    padding-left: 20px;
   }
 
 
